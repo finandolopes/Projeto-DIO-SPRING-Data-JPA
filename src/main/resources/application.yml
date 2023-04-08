@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
+    username: postgres
+    password: postgres123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server.port: 8080
+
+#-- Paths to include: https://springdoc.org/#swagger-ui-configuration
+springdoc:
+  pathsToMatch: /api/v1/**
+  swagger-ui:
+    use-root-path: true
+
+#-- Logging JPA Queries: Via Loggers
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        type: trace
